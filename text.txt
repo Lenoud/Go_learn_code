@@ -1,0 +1,10 @@
+你好
+haha
+xixi
+luobozi
+lenoud
+blilbili
+tencent
+bytethis is io.WriteString直接使用打开文件写入！
+this is io.WriteString
+直接使用打开文件写入！

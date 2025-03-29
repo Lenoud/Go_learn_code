@@ -15,61 +15,62 @@ import (
 //支持多个返回值，支持命名参数返回，支持可变长参数，支持匿名参数，支持闭包，可以把函数作为参数传递、赋值、返回
 //不支持有名函数的嵌套，不支持重载，不支持默认参数
 
-//func main() {
-//	test1()
-//	fmt.Println(test2(5, 6))
-//	x, y := test3(5, 6) //多个返回值
-//	fmt.Println(x, y)
-//	z := test4(5, 6)
-//	fmt.Println(z)
-//
-//	//检查密码
-//	var pass string
-//	fmt.Println("输入密码：")
-//	fmt.Scanln(&pass)
-//	check := pass_check(pass)
-//	if check == true {
-//		fmt.Println("符合要求")
-//	} else {
-//		fmt.Println("不符合要求")
-//	}
-//
-//	//调用可变长参数
-//	result1 := test5()
-//	result2 := test5(1)
-//	result3 := test5(1, 2)
-//	result4 := test5(1, 2, 3)
-//	fmt.Println(result1, result2, result3, result4)
-//
-//	//匿名函数
-//	noname := func() {
-//		fmt.Println("noname是一个匿名函数")
-//	}
-//	noname()
-//	//定义匿名函数时调用
-//	usefunc := func(num1, num2 int) int {
-//		return num1 + num2
-//	}(10, 20)
-//	fmt.Println(usefunc)
-//
-//	//函数作为返回值
-//	myf := myfunc()
-//	result := myf()
-//	fmt.Println(result)
-//
-//	//把函数作为参数传递
-//	result5 := myfunc3(test4, 10, 20)
-//	fmt.Println(result5)
-//
-//	// 自定义类型
-//	//type a int //自定义一个a类型，底层使用的还是int类型
-//	//var x1 a = 123
-//	//var y1 int = 456
-//	//fmt.Println(x1 + y1)
-//	//还是不可以计算
-//	//invalid operation: x1 + y1 (mismatched types a and int)
-//
-//}
+func main() {
+	test1()
+	fmt.Println(test2(5, 6))
+	x, y := test3(5, 6) //多个返回值
+	fmt.Println(x, y)
+	z := test4(5, 6)
+	fmt.Println(z)
+
+	//检查密码
+	var pass string
+	fmt.Println("输入密码：")
+	fmt.Scanln(&pass)
+	check := pass_check(pass)
+	if check == true {
+		fmt.Println("符合要求")
+	} else {
+		fmt.Println("不符合要求")
+	}
+
+	//调用可变长参数
+	fmt.Println("调用可变长参数")
+	result1 := test5()
+	result2 := test5(1)
+	result3 := test5(1, 2)
+	result4 := test5(1, 2, 3)
+	fmt.Println(result1, result2, result3, result4)
+
+	//匿名函数
+	noname := func() {
+		fmt.Println("noname是一个匿名函数")
+	}
+	noname()
+	//定义匿名函数时调用
+	usefunc := func(num1, num2 int) int {
+		return num1 + num2
+	}(10, 20)
+	fmt.Println(usefunc)
+
+	//函数作为返回值
+	myf := myfunc()
+	result := myf()
+	fmt.Println(result)
+
+	//把函数作为参数传递
+	result5 := myfunc3(test4, 10, 20)
+	fmt.Println(result5)
+
+	// 自定义类型
+	//type a int //自定义一个a类型，底层使用的还是int类型
+	//var x1 a = 123
+	//var y1 int = 456
+	//fmt.Println(x1 + y1)
+	//还是不可以计算
+	//invalid operation: x1 + y1 (mismatched types a and int)
+
+}
 
 func test1() {
 	fmt.Println("this is test1")
